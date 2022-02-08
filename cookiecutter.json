@@ -1,0 +1,12 @@
+{
+	"environment": "environment e.g abs, cds, cbs",
+	
+	"service_name": "name of the service",
+	"function_name": "name of the function",
+	"module_name": "{{ cookiecutter.function_name|lower|replace(' ', '-') }}",
+	"function_description": "description of the function",
+	"lambda_handler": "lambda handler (e.g index.handler)",
+	"lambda_runtime": ["nodejs14.x", "nodejs12.x"],
+	"vpc": ["no", "yes"]
+}
+

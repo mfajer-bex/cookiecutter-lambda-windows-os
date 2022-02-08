@@ -1,0 +1,29 @@
+{
+    "name": "{{ cookiecutter.function_name|lower|replace(' ', '-') }}",
+    "version": "1.0.0",
+    "description": "{{ cookiecutter.function_description|lower|replace(' ', '-') }}",
+    "author": "Bex Money Ltd",
+    "license": "UNLICENSED",
+    "dependencies": {
+    },
+  
+    "scripts": {
+      "lint" : "npx eslint src/**/*.ts --fix",
+      "build": "tsc --build",
+      "local": "node -e \"(async () => {try{const result = await require('./build/index').handler(require('./events/event.json'));console.log(result);} catch(err){console.log(err);}})();\"",
+      "watch": "tsc --watch"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.14.8",
+      "@babel/preset-env": "^7.14.9",
+      "@babel/preset-typescript": "^7.14.5",
+      "@types/aws-lambda": "^8.10.51",
+      "@types/node": "^13.13.5",
+      "@typescript-eslint/eslint-plugin": "^5.9.1",
+      "@typescript-eslint/parser": "^5.9.1",
+      "aws-sdk": "^2.655.0",
+      "eslint": "^8.7.0",
+      "eslint-config-google": "^0.14.0",
+      "typescript": "^3.8.3"
+    }
+  }
