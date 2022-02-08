@@ -1,0 +1,1 @@
+# cookiecutter-lambda-windows-os
